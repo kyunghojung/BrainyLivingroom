@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background_grey">#eeeeee</color>
+    <color name="background_grey_m">#777777</color>
+    <color name="background_write">#ffffff</color>
+    <color name="tile_red">#e51400</color>
+    <color name="tile_green">#339933</color>
+    <color name="tile_light_green">#6ed26e</color>
+    <color name="tile_blue">#1ca1e2</color>
+    <color name="tile_light_blue">#64b4e1</color>
+    <color name="tile_purple">#6f155f</color>
+    <color name="tile_orange">#df9319</color>
+    <color name="tile_pink">#f09187</color>
+    <color name="dark_red">#ffa02d38</color>
+    <color name="base_grey">#46485f</color>
+    <color name="base_grey_in">#767996</color>
+    <color name="light_grey">#969696</color>
+    <color name="base_write">#FFFFFF</color>
+    <color name="base_write_in">#EEEEEE</color>
+    <color name="base_write_in_in">#BBBBBB</color>
+    <color name="sample_primary">#4590bd</color>
+    <color name="sample_accent">#88bfcb</color>
+    <color name="calendar_arrow_color">#969696</color>
+</resources>

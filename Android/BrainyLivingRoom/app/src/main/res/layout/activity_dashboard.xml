@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dahsboard="http://schemas.android.com/apk/res/com.hyunnyapp.brainylivingroom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:textColor="#ffffff">
+
+    <RelativeLayout
+        android:id="@+id/dashboard_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/linearLayout"
+            android:layout_toStartOf="@+id/space">
+            <RelativeLayout
+                android:id="@+id/RelativeLayout1_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/tile_light_blue"
+                android:layout_margin="4dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true">
+                    <com.hyunnyapp.brainylivingroom.ui.FontableTextView
+                        android:text="19:17"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/textView_clock"
+                        android:textStyle="bold"
+                        android:typeface="normal"
+                        android:textSize="50dp"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:gravity="center_vertical|center_horizontal"
+                        dahsboard:font="AndroidClock.ttf"
+                        android:textColor="#ffffff"
+                        android:layout_gravity="center_vertical" />
+                    <TextView
+                        android:text="날짜"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView_date"
+                        android:typeface="normal"
+                        android:textStyle="normal"
+                        android:textSize="20dp"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textColor="#ffffff"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/RelativeLayout1_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="4dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_vertical|center_horizontal">
+
+                    <com.hyunnyapp.brainylivingroom.calendarview.MaterialCalendarView
+                        android:id="@+id/calendarView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+        <Space
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/space" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/space">
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout2_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/tile_light_green"
+                android:layout_margin="4dp" >
+
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="도시"
+                    android:id="@+id/textView_weather_city"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="좌표"
+                    android:id="@+id/textView_weather_geo"
+                    android:textSize="10dp"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignTop="@+id/textView_weather_city"
+                    android:layout_alignBottom="@+id/textView_weather_city"
+                    android:layout_toEndOf="@+id/textView_weather_city" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView_weather_refresh"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/ic_menu_refresh" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="현재기온"
+                    android:id="@+id/textView_weather_temp"
+                    android:layout_gravity="center_vertical"
+                    android:textIsSelectable="true"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textColor="#ffffff"
+                    android:textSize="40dp"
+                    android:layout_below="@+id/textView_weather_city"
+                    android:layout_above="@+id/textView_weather_condition" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="condition"
+                    android:id="@+id/textView_weather_condition"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView_weather_icon"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/textView_weather_temp"
+                    android:layout_toEndOf="@+id/textView_weather_condition"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"  />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="최저/최고"
+                    android:id="@+id/textView_weather_highlow"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/textView_weather_temp"
+                    android:layout_toEndOf="@+id/imageView_weather_icon"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="습도"
+                    android:id="@+id/textView_weather_humi"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/textView_weather_temp"
+                    android:layout_toEndOf="@+id/textView_weather_highlow"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView_weather_setting"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/ic_menu_settings" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/RelativeLayout2_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="거실 온도"
+                        android:id="@+id/textView_temp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:layout_margin="4dp"
+                        android:background="@color/tile_light_green"
+                        android:textIsSelectable="true"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textColor="#ffffff"
+                        android:textSize="40dp" />
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/RelativeLayout2_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="습도"
+                        android:id="@+id/textView_humi"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:layout_margin="4dp"
+                        android:background="@color/tile_light_green"
+                        android:textIsSelectable="true"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textColor="#ffffff"
+                        android:textSize="30dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="조도"
+                        android:id="@+id/textView_lux"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:layout_margin="4dp"
+                        android:background="@color/tile_light_green"
+                        android:textIsSelectable="true"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textColor="#ffffff"
+                        android:textSize="30dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
